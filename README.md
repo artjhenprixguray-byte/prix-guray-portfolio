@@ -2,7 +2,7 @@
 
 Professional portfolio of Art Jhen Prix Guray — Executive Assistant & Healthcare Virtual Assistant.
 
-This repository contains the public portfolio website, a web resume, and the profile image used on the site.
+This repository contains the public portfolio website, a web resume, and the clean profile image used on the site.
 
 ## Site sections
 - Executive & administrative support
