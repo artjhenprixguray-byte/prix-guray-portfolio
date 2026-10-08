@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PG logo">
-  <rect width="64" height="64" rx="14" fill="#17312f"/>
-  <text x="32" y="40" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#f7f4ed">PG</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="pg logo">
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="#e9e4d8" stroke="#ddd6c8" stroke-width="1"/>
+  <text x="32" y="39" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-style="italic" font-weight="700" letter-spacing="-1.5" fill="#5f755d">pg.</text>
 </svg>
