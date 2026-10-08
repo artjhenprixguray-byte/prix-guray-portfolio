@@ -1,0 +1,48 @@
+name: Add WhatsApp contact
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: "!contains(github.event.head_commit.message, 'Add WhatsApp contact button')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add WhatsApp contact option
+        shell: python
+        run: |
+          from pathlib import Path
+
+          index = Path('index.html')
+          html = index.read_text(encoding='utf-8')
+          old = '''      <a class="linkedin-button" href="https://www.linkedin.com/in/prixguray/" target="_blank" rel="noopener">Connect on LinkedIn <span>↗</span></a>
+      <a class="contact-email" href="mailto:artjhenprix.guray@gmail.com">artjhenprix.guray@gmail.com ↗</a>
+      <small>Remote executive &amp; healthcare support</small>'''
+          new = '''      <a class="linkedin-button" href="https://www.linkedin.com/in/prixguray/" target="_blank" rel="noopener">Connect on LinkedIn <span>↗</span></a>
+      <a class="whatsapp-button" href="https://wa.me/649241179554?text=Hi%20Prix%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener" aria-label="Connect with Prix on WhatsApp">Connect on WhatsApp <span>↗</span></a>
+      <a class="contact-email" href="mailto:artjhenprix.guray@gmail.com">artjhenprix.guray@gmail.com ↗</a>
+      <a class="contact-phone" href="https://wa.me/649241179554" target="_blank" rel="noopener">WhatsApp: +64 924 117 9554</a>
+      <small>Remote executive &amp; healthcare support</small>'''
+          if old not in html:
+              raise SystemExit('Expected contact block not found')
+          index.write_text(html.replace(old, new, 1), encoding='utf-8')
+
+          css = Path('styles.css')
+          styles = css.read_text(encoding='utf-8')
+          anchor = '.linkedin-button{display:flex;justify-content:space-between;align-items:center;background:#d8f59d;color:#17312f;text-decoration:none;padding:15px 20px;border-radius:5px;font-weight:700}'
+          addition = anchor + '.whatsapp-button{display:flex;justify-content:space-between;align-items:center;background:#fff;color:#17312f;text-decoration:none;padding:14px 20px;border:1px solid rgba(255,255,255,.72);border-radius:5px;font-weight:700;transition:background .2s ease,color .2s ease}.whatsapp-button:hover{background:#d8f59d;color:#17312f}.contact-phone{color:#d4dedb;text-decoration:none;font-size:.82rem;margin-top:-8px}.contact-phone:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}'
+          if anchor not in styles:
+              raise SystemExit('Expected LinkedIn button style not found')
+          css.write_text(styles.replace(anchor, addition, 1), encoding='utf-8')
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html styles.css
+          git commit -m "Add WhatsApp contact button" || exit 0
+          git push
