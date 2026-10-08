@@ -1,0 +1,82 @@
+:root{
+  --charcoal:#1F2A27;
+  --charcoal-deep:#18211F;
+  --stone:#D8D1C5;
+  --stone-light:#E6E0D6;
+  --cream:#F3EFE7;
+  --cream-light:#F8F5EF;
+  --bronze:#9A7B4F;
+  --bronze-soft:#B99A6A;
+  --slate:#6D7470;
+  --line:#C9C0B3;
+}
+
+body{background:var(--cream);color:var(--charcoal)}
+.site-header{background:rgba(243,239,231,.97);border-bottom-color:var(--line);box-shadow:0 1px 0 rgba(31,42,39,.04)}
+.brand,.site-header nav a{color:var(--charcoal)}
+.brand span{color:var(--bronze)}
+.nav-cta{border-color:var(--charcoal)}
+
+.eyebrow,.section-heading>p{color:#765F3E}
+.hero h1 em,.section-heading h2 em,.meet-copy h2 em,.experience-intro h2 em,.booking-intro h2 em{color:var(--bronze)}
+.lead,.hero-note,.section-heading>p:last-child,.work-sidecopy,.sample-disclaimer,.panel-head p,.principle,.meet-copy p,.experience-intro>p:not(.eyebrow),.experience-timeline p,.booking-intro>p:not(.eyebrow),.booking-points{color:var(--slate)}
+
+.button.dark{background:var(--charcoal);color:var(--cream-light)}
+.button.outline-dark{border-color:var(--charcoal);color:var(--charcoal)}
+
+.hero-card{background:var(--stone);border-color:#BFB5A6}
+.hero-card-footer{background:var(--stone)}
+.hero-card-footer small{color:var(--slate)}
+.hero-card-footer b{color:var(--bronze)}
+
+.promise-wrap{background:var(--charcoal-deep)}
+.promise-row{color:var(--cream-light)}
+.promise-row span{color:var(--bronze-soft)}
+.promise-row p{color:#D8D4CB}
+
+.stats-wrap{background:var(--stone-light);border-bottom-color:var(--line)}
+.stats div{border-right-color:var(--line)}
+.stats span{color:var(--slate)}
+
+#services{border-top-color:var(--line)}
+#services .service-grid{border-top-color:var(--line);border-left-color:var(--line)}
+#services .service-grid article{border-right-color:var(--line);border-bottom-color:var(--line)}
+#services .service-grid article>b{color:var(--bronze)}
+#services .service-grid h3{color:var(--charcoal)}
+#services .service-grid article>p{color:var(--slate)}
+#services .service-grid .chips span,.chips span,.tool-pills span{border-color:var(--line);color:#555C59;background:transparent}
+
+.work-wrap{background:#DED7CC}
+.work-tab{border-color:#B9B0A3;background:#E7E0D5;color:var(--charcoal)}
+.work-tab.active{background:var(--charcoal);color:var(--cream-light);border-color:var(--charcoal)}
+.work-panel{background:var(--cream-light);border-color:#BEB5A8}
+.sample-badge{background:#E7DFD2;color:#66563F}
+.data-table,.data-row{border-color:#D7CFC3}
+.data-head{background:#E9E3D9;color:#666D69}
+.status.green{background:#D7D4C6}
+.status.sand{background:#E6D4B8}
+.eod-grid>div{background:#EAE4DA}
+.eod-grid p{color:var(--slate)}
+
+.meet-prix,.experience-wrap,.tool-strip,.footer-wrap{border-color:var(--line)}
+.meet-photo figcaption,.experience-timeline time{color:var(--slate)}
+.experience-timeline:before{background:#B7AC9C}
+.timeline-dot{background:var(--bronze)}
+
+/* Make Google's white booking card look intentional */
+.booking-wrap{background:var(--stone);border-top-color:#BDB3A4;border-bottom-color:#BDB3A4}
+.booking-calendar{background:#fff;border-color:#B8AEA0;box-shadow:0 16px 34px rgba(31,42,39,.12)}
+.booking-calendar iframe{background:#fff}
+.booking-fallback{background:var(--charcoal)!important;color:var(--cream-light)!important}
+
+.contact-card{background:var(--charcoal-deep);color:var(--cream-light)}
+.contact-card .eyebrow{color:#D0B488}
+.contact-copy>p:last-child,.contact-actions small{color:#D8D4CB}
+.linkedin-button{background:#C7A56D;color:var(--charcoal-deep)}
+.contact-email{color:var(--cream-light)}
+.contact-actions a[aria-label*="WhatsApp"]{background:var(--cream)!important;color:var(--charcoal)!important;border-color:var(--stone)!important}
+.contact-actions a[href^="https://wa.me/"]{color:#DDD6CB!important}
+
+.site-footer a,.site-footer .brand{color:var(--charcoal)}
+.site-footer p{color:var(--slate)}
+.site-footer .brand span{color:var(--bronze)}
