@@ -1,0 +1,59 @@
+name: Rebuild portfolio images
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rebuild-images.yml'
+      - 'assets/img/**'
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Rebuild image binaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat assets/img/prof0.txt assets/img/prof1.txt assets/img/prof2.txt assets/img/prof3.txt | tr -d '\n\r ' | base64 --decode > assets/profile-photo.webp
+          cat assets/img/casual0.txt assets/img/casual1.txt assets/img/casual2.txt | tr -d '\n\r ' | base64 --decode > assets/meet-casual.webp
+          cat assets/img/dark0.txt | tr -d '\n\r ' | base64 --decode > assets/meet-dark.webp
+          test -s assets/profile-photo.webp
+          test -s assets/meet-casual.webp
+          test -s assets/meet-dark.webp
+          file assets/profile-photo.webp assets/meet-casual.webp assets/meet-dark.webp
+
+      - name: Point website to rebuilt images
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text()
+          s = s.replace('assets/profile-photo-updated.svg', 'assets/profile-photo.webp?v=3')
+          s = s.replace('assets/meet-casual.svg', 'assets/meet-casual.webp?v=3')
+          s = s.replace('assets/meet-dark.svg', 'assets/meet-dark.webp?v=3')
+          p.write_text(s)
+          PY
+
+      - name: Commit rebuilt images
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/profile-photo.webp assets/meet-casual.webp assets/meet-dark.webp index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Fix portfolio image quality and broken hero photo"
+            git push
+          fi
