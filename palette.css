@@ -74,8 +74,9 @@ body{background:var(--cream);color:var(--charcoal)}
 .contact-copy>p:last-child,.contact-actions small{color:#D8D4CB}
 .linkedin-button{background:#C7A56D;color:var(--charcoal-deep)}
 .contact-email{color:var(--cream-light)}
-.contact-actions a[aria-label*="WhatsApp"]{background:var(--cream)!important;color:var(--charcoal)!important;border-color:var(--stone)!important}
 .contact-actions a[href^="https://wa.me/"]{color:#DDD6CB!important}
+.contact-actions a[aria-label*="WhatsApp"]{background:var(--slate)!important;color:var(--cream-light)!important;border-color:var(--slate)!important;box-shadow:0 6px 16px rgba(0,0,0,.12)}
+.contact-actions a[aria-label*="WhatsApp"]:hover{background:var(--bronze)!important;color:var(--charcoal-deep)!important;border-color:var(--bronze)!important}
 
 .site-footer a,.site-footer .brand{color:var(--charcoal)}
 .site-footer p{color:var(--slate)}
