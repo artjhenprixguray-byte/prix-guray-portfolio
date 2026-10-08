@@ -19,8 +19,9 @@
     <a class="nav-cta" href="#contact">Let’s connect ↗</a>
   </nav>
 </header>
+
 <main>
-<section class="hero" id="top">
+<section class="hero page-shell" id="top">
   <div class="hero-copy">
     <p class="eyebrow">● REMOTE SUPPORT · PHILIPPINES</p>
     <h1>Organized<br>support.<br><em>More room</em><br>to focus.</h1>
@@ -43,20 +44,24 @@
   </div>
 </section>
 
-<section class="promise-row">
-  <article><span>01</span><h2>A calendar with room to breathe</h2><p>Appointments, priorities &amp; reminders</p></article>
-  <article><span>02</span><h2>Communication that keeps moving</h2><p>Inboxes, inquiries &amp; follow-ups</p></article>
-  <article><span>03</span><h2>Details that stay connected</h2><p>Records, workflows &amp; documentation</p></article>
+<section class="promise-wrap">
+  <div class="promise-row page-shell compact-shell">
+    <article><span>01</span><h2>A calendar with room to breathe</h2><p>Appointments, priorities &amp; reminders</p></article>
+    <article><span>02</span><h2>Communication that keeps moving</h2><p>Inboxes, inquiries &amp; follow-ups</p></article>
+    <article><span>03</span><h2>Details that stay connected</h2><p>Records, workflows &amp; documentation</p></article>
+  </div>
 </section>
 
-<section class="stats">
-  <div><strong>4 years</strong><span>in healthcare support</span></div>
-  <div><strong>Patient + provider</strong><span>communication experience</span></div>
-  <div><strong>Executive assistance</strong><span>scheduling, coordination &amp; daily operations</span></div>
-  <div><strong>Technical foundation</strong><span>Shopify + front-end development</span></div>
+<section class="stats-wrap">
+  <div class="stats page-shell compact-shell">
+    <div><strong>4 years</strong><span>in healthcare support</span></div>
+    <div><strong>Patient + provider</strong><span>communication experience</span></div>
+    <div><strong>Executive assistance</strong><span>scheduling, coordination &amp; daily operations</span></div>
+    <div><strong>Technical foundation</strong><span>Shopify + front-end development</span></div>
+  </div>
 </section>
 
-<section class="section" id="services">
+<section class="section page-shell" id="services">
   <div class="section-heading"><p>01 / HOW I CAN HELP</p><h2>The right support.<br><em>Where you need it.</em></h2><p>Practical help for busy executives, healthcare professionals, and growing businesses.</p></div>
   <div class="service-grid">
     <article><b>01</b><h3>Executive &amp; administrative support</h3><p>Keep your day organized with email and calendar management, administrative coordination, vendor follow-ups, and clear documentation.</p><div class="chips"><span>Email management</span><span>Calendar management</span><span>Google Workspace</span></div></article>
@@ -66,25 +71,59 @@
   </div>
 </section>
 
-<section class="section sample-section" id="work">
-  <div class="section-heading"><p>02 / A LOOK AT THE WORK</p><h2>Clear systems.<br><em>Visible next steps.</em></h2><p>Illustrative sample projects using fictional information. These are demonstrations, not client records or claimed client results.</p></div>
-  <article class="sample large">
-    <small>01 · WEEKLY PRIORITIES</small><h3>A week with priorities in view</h3><p>A simple planning view that connects each commitment to its preparation and next action.</p>
-    <div class="priority-table">
-      <div class="row head"><span>When</span><span>Priority</span><span>Preparation / next action</span><span>Status</span></div>
-      <div class="row"><span>Monday · 10 AM</span><span>Weekly planning</span><span>Prepare priorities and open questions</span><span>Ready</span></div>
-      <div class="row"><span>Tuesday · 11 AM</span><span>Vendor check-in</span><span>Request updated delivery estimate</span><span>Follow up</span></div>
-      <div class="row"><span>Wednesday · 2 PM</span><span>Project review</span><span>Collect updates and decision points</span><span>Scheduled</span></div>
-      <div class="row"><span>Friday · 3 PM</span><span>Weekly wrap-up</span><span>Summarize progress and carry-over tasks</span><span>Planned</span></div>
+<section class="work-wrap" id="work">
+  <div class="section work-section page-shell">
+    <div class="work-intro">
+      <div class="section-heading work-heading"><p>02 / A LOOK AT THE WORK</p><h2>Clear systems.<br><em>Visible next steps.</em></h2></div>
+      <p class="work-sidecopy">Explore three examples of how I would organize everyday administrative work.</p>
     </div>
-  </article>
-  <div class="sample-grid">
-    <article class="sample"><small>02 · END-OF-DAY REPORT</small><h3>Easy-to-scan updates</h3><p>Completed work, pending items, blockers, and next steps organized into a concise report.</p></article>
-    <article class="sample"><small>03 · CRM FOLLOW-UPS</small><h3>No lead without a next step</h3><p>Every contact is tied to a stage, next action, and due date until it is booked or properly closed out.</p></article>
+    <p class="sample-disclaimer">Illustrative sample projects using fictional information. These are demonstrations, not client records or claimed client results.</p>
+
+    <div class="work-tabs" role="tablist" aria-label="Sample work examples">
+      <button class="work-tab active" role="tab" aria-selected="true" aria-controls="panel-weekly" id="tab-weekly" data-tab="weekly">01 · Weekly priorities</button>
+      <button class="work-tab" role="tab" aria-selected="false" aria-controls="panel-eod" id="tab-eod" data-tab="eod">02 · End-of-day report</button>
+      <button class="work-tab" role="tab" aria-selected="false" aria-controls="panel-crm" id="tab-crm" data-tab="crm">03 · CRM follow-ups</button>
+    </div>
+
+    <div class="work-panels">
+      <article class="work-panel active" id="panel-weekly" role="tabpanel" aria-labelledby="tab-weekly" data-panel="weekly">
+        <div class="panel-head"><div><h3>A week with priorities in view</h3><p>A simple planning view that connects each commitment to its preparation and next action.</p></div><span class="sample-badge">SAMPLE PROJECT</span></div>
+        <div class="data-table">
+          <div class="data-row data-head"><span>WHEN</span><span>PRIORITY</span><span>PREPARATION / NEXT ACTION</span><span>STATUS</span></div>
+          <div class="data-row"><span><strong>Monday · 10 AM</strong></span><span>Weekly planning</span><span>Prepare priorities and open questions</span><span><mark class="status green">Ready</mark></span></div>
+          <div class="data-row"><span><strong>Tuesday · 11 AM</strong></span><span>Vendor check-in</span><span>Request updated delivery estimate</span><span><mark class="status sand">Follow up</mark></span></div>
+          <div class="data-row"><span><strong>Wednesday · 2 PM</strong></span><span>Project review</span><span>Collect updates and decision points</span><span><mark class="status green">Scheduled</mark></span></div>
+          <div class="data-row"><span><strong>Friday · 3 PM</strong></span><span>Weekly wrap-up</span><span>Summarize progress and carry-over tasks</span><span><mark class="status green">Planned</mark></span></div>
+        </div>
+        <p class="principle">Planning principle: every appointment has a purpose, preparation, and follow-up.</p>
+      </article>
+
+      <article class="work-panel" id="panel-eod" role="tabpanel" aria-labelledby="tab-eod" data-panel="eod" hidden>
+        <div class="panel-head"><div><h3>An update you can act on</h3><p>A concise daily report that separates completed work, blockers, and next priorities.</p></div><span class="sample-badge">SAMPLE PROJECT</span></div>
+        <div class="eod-grid">
+          <div><h4>Completed today</h4><p>Organized the shared inbox.<br>Updated meeting notes.<br>Confirmed tomorrow’s calendar.</p></div>
+          <div><h4>Needs your input</h4><p>Vendor quote is ready for review. Please confirm whether to proceed before I schedule the next step.</p></div>
+          <div><h4>Next work session</h4><p>Follow up on pending replies.<br>Update the task tracker.<br>Prepare the weekly summary.</p></div>
+        </div>
+        <p class="principle">Reporting principle: make the decision needed easy to find.</p>
+      </article>
+
+      <article class="work-panel" id="panel-crm" role="tabpanel" aria-labelledby="tab-crm" data-panel="crm" hidden>
+        <div class="panel-head"><div><h3>Every lead has a next action</h3><p>A platform-neutral CRM example showing how stages and due dates make follow-ups easier to manage.</p></div><span class="sample-badge">SAMPLE PROJECT</span></div>
+        <div class="data-table crm-table">
+          <div class="data-row data-head"><span>FICTIONAL LEAD</span><span>STAGE</span><span>NEXT ACTION</span><span>DUE</span></div>
+          <div class="data-row"><span><strong>Example business A</strong></span><span>New inquiry</span><span>Review request and prepare a reply</span><span>Today</span></div>
+          <div class="data-row"><span><strong>Example business B</strong></span><span>Awaiting response</span><span>Send an approved follow-up</span><span>Tomorrow</span></div>
+          <div class="data-row"><span><strong>Example business C</strong></span><span>Meeting booked</span><span>Confirm details and prepare notes</span><span>Before meeting</span></div>
+          <div class="data-row"><span><strong>Example business D</strong></span><span>Closed</span><span>Record outcome and close task</span><span>Complete</span></div>
+        </div>
+        <p class="principle">Workflow principle: track a stage, a next action, and a due date.</p>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="section meet-prix" id="about">
+<section class="section meet-prix page-shell" id="about">
   <div class="meet-copy">
     <p class="eyebrow">MEET PRIX</p>
     <h2>A person behind<br><em>every detail.</em></h2>
@@ -94,40 +133,74 @@
     <a class="button outline-dark" href="#contact">Let’s get to know each other ↗</a>
   </div>
   <div class="meet-gallery">
-    <figure class="meet-photo meet-photo-a">
-      <img src="assets/meet-casual.svg" alt="Art Jhen Prix Guray in a light blue hoodie by a brick wall">
-      <figcaption>The person behind the work</figcaption>
-    </figure>
-    <figure class="meet-photo meet-photo-b">
-      <img src="assets/meet-dark.svg" alt="Art Jhen Prix Guray in a dark suit with dramatic lighting">
-      <figcaption>A creative perspective</figcaption>
-    </figure>
+    <figure class="meet-photo meet-photo-a"><img src="assets/meet-casual.svg" alt="Art Jhen Prix Guray in a light blue hoodie by a brick wall"><figcaption>The person behind the work</figcaption></figure>
+    <figure class="meet-photo meet-photo-b"><img src="assets/meet-dark.svg" alt="Art Jhen Prix Guray in a dark suit with dramatic lighting"><figcaption>A creative perspective</figcaption></figure>
   </div>
 </section>
 
-<section class="section" id="experience">
-  <div class="section-heading"><p>03 / THE EXPERIENCE BEHIND THE SUPPORT</p><h2>People skills.<br><em>Process thinking.</em><br>Technical roots.</h2><p>My career brings together healthcare communication, executive assistance, and web development. I’m comfortable working with people, organizing details, and learning the systems that connect them.</p><a class="button dark" href="resume.html">View my resume ↓</a></div>
-  <div class="timeline">
-    <article><time>JULY 2026 — PRESENT</time><h3>Executive Assistant</h3><b>Freelance · Part-time</b><p>Email and calendar management, vendor coordination, Google Workspace organization, and administrative workflow and automation support.</p></article>
-    <article><time>APRIL 2024 — APRIL 2026</time><h3>Healthcare Chat &amp; Email Support</h3><b>Carelon Global Solutions</b><p>Assisted patients through email and chat, documented inquiries, resolved service concerns, and handled escalations within established policies.</p></article>
-    <article><time>APRIL 2022 — APRIL 2024</time><h3>Healthcare Provider Support</h3><b>Conduent Philippines</b><p>Supported provider calls, maintained CRM records, and processed claims, authorizations, and refunds according to company procedures.</p></article>
-    <article><time>JANUARY 2017 — APRIL 2022</time><h3>Front-End Developer</h3><b>Freelance</b><p>Customized Shopify stores and themes using HTML, CSS, JavaScript, and Liquid, with responsive layouts, app integrations, and usability improvements.</p></article>
+<section class="experience-wrap" id="experience">
+  <div class="experience-layout page-shell">
+    <div class="experience-intro">
+      <p class="eyebrow">03 / THE EXPERIENCE BEHIND THE SUPPORT</p>
+      <h2>People skills.<br>Process thinking.<br><em>Technical roots.</em></h2>
+      <p>My career brings together healthcare communication, executive assistance, and web development. I’m comfortable working with people, organizing details, and learning the systems that connect them.</p>
+      <a class="button outline-dark" href="resume.html">Download my resume ↓</a>
+    </div>
+    <div class="experience-timeline">
+      <article><span class="timeline-dot"></span><time>JULY 2026 — PRESENT</time><h3>Executive Assistant</h3><b>Freelance · Part-time</b><p>Email and calendar management, vendor coordination, Google Workspace organization, and administrative workflow and automation support.</p></article>
+      <article><span class="timeline-dot"></span><time>APRIL 2024 — APRIL 2026</time><h3>Healthcare Chat &amp; Email Support</h3><b>Carelon Global Solutions</b><p>Assisted patients through email and chat, documented inquiries, resolved service concerns, and handled escalations within established policies.</p></article>
+      <article><span class="timeline-dot"></span><time>APRIL 2022 — APRIL 2024</time><h3>Healthcare Provider Support</h3><b>Conduent Philippines</b><p>Supported provider calls, maintained CRM records, and processed claims, authorizations, and refunds according to company procedures.</p></article>
+      <article><span class="timeline-dot"></span><time>JANUARY 2017 — APRIL 2022</time><h3>Front-End Developer</h3><b>Freelance</b><p>Customized Shopify stores and themes using HTML, CSS, JavaScript, and Liquid, with responsive layouts, app integrations, and usability improvements.</p></article>
+    </div>
+    <div class="tool-strip">
+      <p class="eyebrow">TOOLS &amp; FOUNDATIONS</p>
+      <div class="tool-pills"><span>Google Workspace</span><span>CRM systems</span><span>AGS / GoHighLevel workflows</span><span>Shopify</span><span>HTML &amp; CSS</span><span>JavaScript</span><span>Liquid</span></div>
+    </div>
   </div>
 </section>
 
-<section class="section tools">
-  <div><p class="eyebrow">TOOLS &amp; FOUNDATIONS</p><div class="chips big"><span>Google Workspace</span><span>CRM systems</span><span>AGS / GoHighLevel workflows</span><span>Shopify</span><span>HTML &amp; CSS</span><span>JavaScript</span><span>Liquid</span></div></div>
-  <div><p class="eyebrow">MY APPROACH</p><h2>Thoughtful communication.<br>Careful follow-through.</h2><p>I aim to make your work easier to manage: clarify the priority, document the details, and keep you informed about what needs attention. My healthcare background taught me the value of accuracy and discretion. My technical background helps me troubleshoot, understand workflows, and adapt to new tools.</p></div>
-</section>
-
-<section class="contact" id="contact">
-  <p class="eyebrow">LET’S MAKE YOUR DAY MORE MANAGEABLE</p>
-  <h2>What would you like<br><em>off your plate?</em></h2>
-  <p>Tell me about your business, the tasks taking up your time, and the kind of support you need. Let’s explore how I can help.</p>
-  <div class="actions center"><a class="button light" href="mailto:artjhenprix.guray@gmail.com">Email me</a><a class="button outline" href="https://www.linkedin.com/in/prixguray/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
-  <a class="email" href="mailto:artjhenprix.guray@gmail.com">artjhenprix.guray@gmail.com</a>
+<section class="contact-section page-shell" id="contact">
+  <div class="contact-card">
+    <div class="contact-copy">
+      <p class="eyebrow">LET’S MAKE YOUR DAY MORE MANAGEABLE</p>
+      <h2>What would you like<br>off your plate?</h2>
+      <p>Tell me about your business, the tasks taking up your time, and the kind of support you need. Let’s explore how I can help.</p>
+    </div>
+    <div class="contact-actions">
+      <a class="linkedin-button" href="https://www.linkedin.com/in/prixguray/" target="_blank" rel="noopener">Connect on LinkedIn <span>↗</span></a>
+      <a class="contact-email" href="mailto:artjhenprix.guray@gmail.com">artjhenprix.guray@gmail.com ↗</a>
+      <small>Remote executive &amp; healthcare support</small>
+    </div>
+  </div>
 </section>
 </main>
-<footer><div><a class="brand" href="#top">prix guray<span>.</span></a><p>Remote executive &amp; healthcare support.</p></div><div><a href="https://www.linkedin.com/in/prixguray/" target="_blank" rel="noopener">LinkedIn ↗</a> · <a href="resume.html">Resume ↓</a> · <a href="mailto:artjhenprix.guray@gmail.com">Email ↗</a></div><p>© 2026 Art Jhen Prix Guray · Philippines</p></footer>
+
+<footer class="footer-wrap">
+  <div class="site-footer page-shell compact-shell">
+    <a class="brand" href="#top">prix guray<span>.</span></a>
+    <p>© 2026 Art Jhen Prix Guray · Philippines</p>
+    <a href="https://www.linkedin.com/in/prixguray/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a href="mailto:artjhenprix.guray@gmail.com">Email ↗</a>
+    <a href="resume.html">Resume ↓</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const tabs = document.querySelectorAll('.work-tab');
+  const panels = document.querySelectorAll('.work-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      tabs.forEach(t => { t.classList.toggle('active', t === tab); t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
+      panels.forEach(panel => {
+        const show = panel.dataset.panel === target;
+        panel.classList.toggle('active', show);
+        panel.hidden = !show;
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>
