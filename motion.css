@@ -1,0 +1,48 @@
+/* Motion layers onto the existing layout and premium palette. */
+.button, .nav-cta, .work-tab, .contact-actions a {
+  transition: color 200ms ease, background-color 200ms ease,
+    border-color 200ms ease, box-shadow 240ms ease, transform 240ms ease;
+}
+#services .service-grid article, .hero-card {
+  transition: background-color 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+}
+.hero-card img, .meet-photo img {
+  transition: filter 300ms ease;
+}
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 4px;
+}
+.work-tab:focus-visible { outline-offset: -4px; }
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover, .nav-cta:hover, .contact-actions a:hover {
+    transform: translateY(-2px);
+  }
+  .button.dark:hover {
+    background: var(--charcoal-deep);
+    box-shadow: 0 5px 14px rgba(31,42,39,.14);
+  }
+  .button.outline-dark:hover, .nav-cta:hover {
+    background: var(--stone-light);
+    border-color: var(--bronze);
+  }
+  #services .service-grid article:hover {
+    background: var(--cream-light);
+    box-shadow: inset 0 2px 0 var(--bronze);
+  }
+  .work-tab:hover { border-color: var(--bronze); }
+  .work-tab:not(.active):hover { background: var(--stone); }
+  .hero-card:hover { border-color: var(--bronze); }
+  .hero-card:hover img, .meet-photo:hover img { filter: brightness(1.025); }
+  .linkedin-button:hover { background: var(--bronze-soft); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button, .nav-cta, .work-tab, .contact-actions a,
+  #services .service-grid article, .hero-card, .hero-card img, .meet-photo img {
+    transition: none;
+  }
+  .button:hover, .nav-cta:hover, .contact-actions a:hover { transform: none; }
+}
